@@ -1,5 +1,7 @@
 #include <reg52.h>
-
+/*
+此程序用在STC12C5A60S2芯片上，用作控制两块点阵显示字符“DH”
+*/
 void delay(unsigned int count)
 {
 	int i=0;
