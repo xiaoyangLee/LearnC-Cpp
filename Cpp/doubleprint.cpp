@@ -10,7 +10,9 @@ int main()
 		t=t*i;
 		s=s+t;
 	}
-	printf("%d",s);
+	
+	//如果要打印double类型的数据，用%f,使用%d只会打印出0.
+	printf("%f",s);
 	return 0;
 }
 
