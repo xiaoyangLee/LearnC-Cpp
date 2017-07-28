@@ -5,7 +5,7 @@ typedef是给一个类型重命名
 define工作在预编译时,进行简单的文本替换
 define定义时,如果涉及到运算式,需要用括号括起
 for example:
-define f(x) (x*x)
+define f(x) ((x)*(x))
 
 typedef工作在编译时,将数据类型重名命
 typedef可以命名复杂的数据类型,我们常见的结构体类型,就常常和typedef结合起来使用
