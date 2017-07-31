@@ -18,6 +18,14 @@ void print_Array(int *arr,int size)
 如果使用数组作为参数传递,函数定义如下,函数体如上,就不再写了。
 */
 void print_Array_(int array[],int size);
+
+/*
+使用一维数组指针传递二维数组,必须制定一维数组的长度,如果没有指定,函数编译通过,但是无法调用。
+*/
+void print_Array_twodimen(int (*pArray)[3])
+{
+    
+}
 int main()
 {
     //定义一个数组,存放5个元素
@@ -37,6 +45,20 @@ int main()
     printf("长度为 %d 的array_b[]数组的值为:\n",len_b);
     print_Array(array_b,len_b);
 
-    //定义一个二维数组
+    //定义一个二维数组,第二维的长度必须指定
+    //因为初始化的时候，第二维的数字代表分配内存的长度，第一维的数字代表分配内存倍数；倍数可以让机器去数，但长度没有的话就不好开辟空间了。
+    int array_two_dimen[][4] = {
+        {1,2,3,4},
+        {5,6,7,8},
+        {9,10,11,12},
+    };
+    //求出二维数组的长度,行列数
+    int len_row = sizeof(array_two_dimen)/sizeof(array_two_dimen[0]);
+    int len_col = sizeof(array_two_dimen[0])/sizeof(array_two_dimen[0][0]);
+    printf("\n");
+    printf("二维数组行的长度为 %d ",len_row);
+    printf("\n");
+    printf("二维数组列的长度为 %d ",len_col);
+    
 
 }
