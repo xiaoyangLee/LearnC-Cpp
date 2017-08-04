@@ -22,9 +22,15 @@ void print_Array_(int array[],int size);
 /*
 使用一维数组指针传递二维数组,必须制定一维数组的长度,如果没有指定,函数编译通过,但是无法调用。
 */
-void print_Array_twodimen(int (*pArray)[3])
+void print_Array_twodimen(int (*pArray)[3],int size)
 {
-    
+    int i,j;
+    for(i=0;i<size;i++){
+        for(j=0;j<3;j++){
+            printf("%d ",pArray[i][j]);
+        }
+        printf("\n");
+    }
 }
 int main()
 {
